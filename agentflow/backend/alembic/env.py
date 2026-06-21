@@ -4,6 +4,8 @@ from app.persistence.models.user import User
 from app.persistence.models.project import Project
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
+from app.persistence.models.workflow import Workflow
+from app.persistence.models.execution import Execution
 
 from alembic import context
 

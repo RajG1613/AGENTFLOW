@@ -1,10 +1,11 @@
 from sqlalchemy import ForeignKey, String
 from sqlalchemy.orm import Mapped, mapped_column
+from app.persistence.models.mixins import TimestampMixin
 
 from app.core.database import Base
 
 
-class Project(Base):
+class Project(TimestampMixin, Base):
     __tablename__ = "projects"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
